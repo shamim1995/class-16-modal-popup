@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a,
+a:hover{
+    text-decoration: none;
+}
+
+html{
+   font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --shadow-1 :
+}
+
+*,
+*::after,
+*::before{
+
+    box-sizing: border-box;
+
+}
+
+/* banner */
+.banner{
+   background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+   url('https://wallpaperaccess.com/full/1802075.jpg');
+   width: 100%;
+   height: 850px;
+   background-position: center;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.banner .banner_content{
+    width: 500px;
+    color: #fff;
+    text-align: center;
+}
+.banner .banner_content h1{
+    font-size: 48px;
+    font-weight: 600;
+}
+.banner .banner_content p{
+    font-size: 18px;
+    margin-bottom: 23px;
+}
+
+.banner .banner_content a {
+    
+    font-size: 18px;
+    color: #000;
+    background: #fff;
+    padding: 8px 12px ;
+    border-radius: 50px;
+}
+
+
+/* modal section */
+
+.sk_modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     opacity: 0;
+     transform: translateY(-100px);
+     transition: .3s ease-in-out;
+}
+.active{
+    opacity:1;
+    transform: translateY(0px);
+    pointer-events: auto;
+}
+.sk_modal .modal_content{
+    background-color: #fff;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+  
+}
+.sk_modal .modal_content .modal_header h3{
+    font-size: 22px;
+    font-weight: 500;
+    
+}
+.sk_modal .modal_content .modal_header  {
+    font-size: 22px;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 10px;
+    font-weight: 500;
+
+}
+.sk_modal .modal_content .modal_body p {
+    
+    border-bottom: 1px solid #ddd;
+    padding: 12px 10px;
+    
+}
+.sk_modal .modal_content .modal_footer  {
+    padding: 8px 15px;
+}
+.sk_modal .modal_content .modal_header{
+display: flex;
+justify-content: space-between;
+}
+.sk_modal .modal_content .modal_header button  {
+    font-size: 28px;
+    border: none;
+    background-color: transparent;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+/* popup section */
+.sk_popup{
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+    pointer-events: none;
+        
+}
+
+.popup_active{
+    opacity: 1;
+    transition: .3 ease-in-out;
+    pointer-events: auto;
+}
+
+.sk_popup .popup_content{
+    width: 500px;
+    background: #242526;
+    color: #fff;
+    border-radius: 10px;
+   
+    
+}
+.sk_popup .popup_content .popup_header{
+    padding: 15px 10px;
+    border-bottom: 1px solid #2f3031;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.sk_popup .popup_content .popup_body {
+
+    padding: 15px 10px;
+   
+}
+
+.sk_popup .popup_content .popup_btn{
+    text-align: right;
+    padding: 25px 25px;
+    
+}
+.sk_popup .popup_content .popup_btn a {
+    display: inline block;
+    cursor: pointer;
+}
+.sk_popup .popup_content .popup_btn a:nth-child(1) {
+    color:#2374e1;
+}
+.sk_popup .popup_content .popup_btn a:nth-child(2) {
+    color: #fff;
+    background-color: #2374e1;
+    padding:5px 12px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.sk_popup .popup_content .popup_header button{
+border: none;
+background: transparent;
+color: #fff;
+font-size: 28px;
+cursor: pointer;
+}
+
+/* accordian section */
+.sk_accordian{
+    background-color: #eee;
+    
+    
+    
+    padding-top: 80px;
+}
+
+.sk_accordian .accordian_header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.accordian_header #minus {
+    position: absolute;
+    right: 14px;
+}
+
+.accordian_header {
+    position: relative;
+    background-color: #052226;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    color:#fff;
+    
+    
+}
+.accordian_img img{
+    width: 800px;
+    height: 500px;
+}
+.accordian_img {
+    float: left;
+}
+
+.sk_content{
+    margin-left: 100px;
+    width: 700px;
+    float: right;
+    
+
+}
+.accordian_header h3{
+    margin-right: 280px;
+    transition: .3s;
+   
+}
+.accordian_body{
+    padding: 10px 15px;
+    background-color: #fff;
+    
+}
+.active{
+    display: none;
+    transition: .3s;
+}
