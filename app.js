@@ -45,12 +45,12 @@ popup_close.addEventListener('click', function () {
 // this function for accordian
 
 const accordian_header = document.querySelectorAll('.accordian_header');
-const accordian_body = document.querySelectorAll('.accordian_body');
+// const accordian_body = document.querySelectorAll('.accordian_body');
 
 accordian_header.forEach(item => {
     item.addEventListener('click',function(){
         item.nextElementSibling.classList.toggle('active')
-     
+        
     })
 });
 
