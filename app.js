@@ -45,12 +45,29 @@ popup_close.addEventListener('click', function () {
 // this function for accordian
 
 const accordian_header = document.querySelectorAll('.accordian_header');
-// const accordian_body = document.querySelectorAll('.accordian_body');
 
-accordian_header.forEach(item => {
-    item.addEventListener('click',function(){
-        item.nextElementSibling.classList.toggle('active')
-        
+accordian_header.forEach(data => {
+    data.addEventListener('click',function(){
+
+        accordian_header.forEach(item =>{
+           
+            if(item != this){
+                 item.classList.remove('active')
+                 item.nextElementSibling.style.height = '0px'
+            }
+            
+        })
+
+        data.classList.toggle('active')
+       
+        if(data.classList.contains('active')){
+             data.nextElementSibling.style.height = data.nextElementSibling.scrollHeight +'px'
+             
+        }else{
+             data.nextElementSibling.style.height = '0px'
+        }
     })
-});
+})
+
+
 

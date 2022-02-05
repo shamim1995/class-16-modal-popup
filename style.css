@@ -201,59 +201,53 @@ cursor: pointer;
 
 /* accordian section */
 .sk_accordian{
-    background-color: #eee;
     
-    
-    
-    padding-top: 80px;
-}
+   width: 100%;
 
-.sk_accordian .accordian_header{
-    display: flex;
-    justify-content: space-between;
-    
-}
-.accordian_header #minus {
-    position: absolute;
-    right: 14px;
-}
-
-.accordian_header {
-    position: relative;
-    background-color: #052226;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    color:#fff;
-    
-    
-}
-.accordian_img img{
-    width: 800px;
-    height: 500px;
-}
-.accordian_img {
-    float: left;
 }
 
 .sk_content{
-    margin-left: 100px;
-    width: 700px;
-    float: right;
-    
+    width: 600px;
+}
 
+.sk_accordian .sk_content{
+    position: relative;
+    margin: 10px 10px;
+    float: right;
 }
-.accordian_header h3{
-    margin-right: 280px;
-    transition: .3s;
-   
+.sk_accordian .accordian_img {
+    float: left;
+     max-width: 600px;
 }
-.accordian_body{
+.sk_accordian .accordian_img img {
+    max-width: 800px;
+}
+.sk_accordian .sk_content .accordian_header{
+    background-color: #319ead;
     padding: 10px 15px;
-    background-color: #fff;
-    
+    color: #fff;
 }
-.active{
-    display: none;
+
+.sk_accordian .sk_content .accordian_header::before {
+    content: "+";
+    position: absolute;
+    right:0;
+    padding: 0px 15px;
+    font-size: 22px;
+    color: #fff;
+}
+
+.sk_accordian .sk_content .accordian_header.active::before {
+    content: "-"; 
+
+} 
+
+.sk_content .accordian_body{
+    height: 0px;
+    overflow: hidden;
+    position: relative;
+    overflow-y: auto;
     transition: .3s;
 }
+
+
